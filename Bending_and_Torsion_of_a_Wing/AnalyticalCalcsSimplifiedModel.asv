@@ -1,13 +1,16 @@
-A1 = 8478;
-A2 = 24628;
-G = 28000;
+clear
+clc
+
+A1 = 60*2 + (pi*40^2)/2;
+A2 = 200*80;
+G = 73e3;
 
 syms q1 q2;
 
-dtdz1 = 1./(2*G*A1).*(q1./0.64*318 + (q1 - q2)./1.7*81);
-dtdz2 = 1./(2*G*A2).*(q2./1.7*81 + q2./1.59*81 + q2./2.34*17.4*2 + q2./0.64*286.66*2 - q1./1.7*81);
+dtdz1 = 1./(2*G*A1).*(q1./0.8*(pi*40+2*60) + (q1 - q2)./2*80);
+dtdz2 = 1./(2*G*A2).*();
 
-Torque = 222.4*0.30406*1000; %torque due to max load 50 Nmm
+Torque = 222.4*0.30406*1000; %torque due to max load 50
 eqn1 = 2*A1.*q1 + 2*A2.*q2 == Torque; 
 eqn2 = dtdz1 - dtdz2 == 0;
 
@@ -45,5 +48,3 @@ plot([0 g18i],[0 Torque],'r',LineWidth=1.5)
 legend('Torque vs Shear Strain (side 1-8)')
 xlabel('Shear Strain')
 ylabel('Torque PL')
-
-
