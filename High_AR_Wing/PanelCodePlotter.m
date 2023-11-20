@@ -23,7 +23,7 @@ for i = 2:2:30 % max is 30
         
         % run the mesh generator
         inputs = fopen('geowinginputs.txt','w');
-        fprintf(inputs,['n\r\n' num2str(i) '\r\n0.225\r\n0.6\r\n0.42\r\nsweep\r\n36.9\r\n0\r\n-15\r\n0\r\n' num2str(j)]);
+        fprintf(inputs,['n\r\n' num2str(i) '\r\n0.225\r\n0.6\r\n0.42\r\nsweep\r\n36.9\r\n0\r\n-1.5\r\n0\r\n' num2str(j)]);
         fclose(inputs);
         [~,cmdout] = system('geowing.exe < geowinginputs.txt');
         % file, cordwise disc, root chord, semi-span, taper, sweep, sweep_LE,
