@@ -27,7 +27,10 @@ for i = 2:2:30 % max is 30
         
         countj = countj + 1; % counts number of iterations
         
-        if i > 20 && j > 12
+        %if i > 20 && j > 12
+        if i*j*5 > 1200
+            cwRes(counti,countj) = NaN;
+            swRes(counti,countj) = NaN;
             continue
         end
         
@@ -89,29 +92,34 @@ refpts = length(red0{1,1});
 %     end
 % end
 
-[~,comparisonpt] = min(abs(red0{1,1}(1) - red0{end,end}(:,1)));
-
-for i = 1:size(red0,1)
-    for j = 1:size(red0,2)
-            [~,Index] = min(abs(red0{1,1}(1) - red0{i,j}(:,1)));
-            %Cpred0{i,j}(k) = red0{i,j}(Index,2);
-            ErrRed(i,j) = abs(red0{i,j}(Index,2) - red0{end,end}(comparisonpt,2));
-
-            [~,Index] = min(abs(yellow0{1,1}(1) - yellow0{i,j}(:,1)));
-            %Cpyellow0{i,j}(k) = yellow0{i,j}(Index,2);
-            ErrYellow(i,j) = abs(yellow0{i,j}(Index,2) - yellow0{end,end}(comparisonpt,2));
-
-            [~,Index] = min(abs(green0{1,1}(1) - green0{i,j}(:,1)));
-            %Cpgreen0{i,j}(k) = green0{i,j}(Index,2);
-            ErrGreen(i,j) = abs(green0{i,j}(Index,2) - green0{end,end}(comparisonpt,2));
-    end
-end
+% [~,comparisonpt] = min(abs(red0{1,1}(1) - red0{end,end}(:,1)));
+% 
+% for i = 1:size(red0,1)
+%     for j = 1:size(red0,2)
+%             [~,Index] = min(abs(red0{1,1}(1) - red0{i,j}(:,1)));
+%             %Cpred0{i,j}(k) = red0{i,j}(Index,2);
+%             ErrRed(i,j) = abs(red0{i,j}(Index,2) - red0{end,end}(comparisonpt,2));
+% 
+%             [~,Index] = min(abs(yellow0{1,1}(1) - yellow0{i,j}(:,1)));
+%             %Cpyellow0{i,j}(k) = yellow0{i,j}(Index,2);
+%             ErrYellow(i,j) = abs(yellow0{i,j}(Index,2) - yellow0{end,end}(comparisonpt,2));
+% 
+%             [~,Index] = min(abs(green0{1,1}(1) - green0{i,j}(:,1)));
+%             %Cpgreen0{i,j}(k) = green0{i,j}(Index,2);
+%             ErrGreen(i,j) = abs(green0{i,j}(Index,2) - green0{end,end}(comparisonpt,2));
+%     end
+% end
 
 % reshape resolution matrices and RMS into arrays for easier plotting
 reshape(swRes.',1,[]);
 reshape(cwRes.',1,[]);
 reshape(CLdRed.',1,[]);
 reshape(panels.',1,[]);
+
+% CLdRed(~cellfun('isempty',CLdRed));
+% swRes(~cellfun('isempty',CLdRed));
+% cwRes(~cellfun('isempty',CLdRed));
+% panels(~cellfun('isempty',CLdRed));
 
 % plot resolutions with RMS error in Cp
 figure(1)
