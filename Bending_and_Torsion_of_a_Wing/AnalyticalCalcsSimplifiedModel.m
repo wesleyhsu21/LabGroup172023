@@ -32,19 +32,19 @@ max_T = 222.4*0.30406*1000; %max torque from 50lbs loading
 %Torque vs shear strain theoretical plots
 
 figure(1) %%UPPER Surface
-plot([0 g23*max_T],[0 max_T],'r',LineWidth=1.5)
+plot([0 max_T],[0 g23*max_T],LineWidth=1.5)
 legend('Torque vs Shear Strain (Upper Surface)')
-xlabel('Shear Strain')
-ylabel('Torque PL')
+ylabel('Shear Strain')
+xlabel('Torque PL (Nmm)')
 
 figure(2) %Lower surface
-plot([0 g76*max_T],[0 max_T],'r',LineWidth=1.5)
+plot([0 max_T],[0 g76*max_T],LineWidth=1.5)
 legend('Torque vs Shear Strain (Lower Surface)')
-xlabel('Shear Strain')
-ylabel('Torque PL')
+ylabel('Shear Strain')
+xlabel('Torque PL (Nmm)')
 
 figure(3) %1-8 front spar wall
-plot([0 g18i*max_T],[0 max_T],'r',LineWidth=1.5)
-legend('Torque vs Shear Strain (side 1-8)')
-xlabel('Shear Strain')
-ylabel('Torque PL')
+plot([0 max_T],[0 g18i*max_T],LineWidth=1.5)
+legend('Torque vs Shear Strain (side 1-8) Front Spar')
+ylabel('Shear Strain')
+xlabel('Torque PL (Nmm)')
