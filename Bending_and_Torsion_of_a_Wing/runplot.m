@@ -9,24 +9,24 @@ theta = 45; % angle between strain gauge
 
 
 % 1.1) strain front spar C,D,E
-gn_fs1  = [0 4.274]; 
-gx_fs1 = [0 0.064];
+gx_fs1  = [0 4.274]; 
+gn_fs1 = [0 0.064];
 gy_fs1 = [0 -3.955];
 
 %Shear strain front spar
 gxy_fs1 = (gn_fs1 - gx_fs1.*cosd(theta)^2 - gy_fs1.*sind(theta)^2)/(sind(theta)*cosd(theta)); 
 
 % 1.2) strain upper surface F,G,H
-gn_u2  = [0 -4.083]; 
-gx_u2 = [0 -11.419];
+gx_u2  = [0 -4.083]; 
+gn_u2 = [0 -11.419];
 gy_u2 = [0 -9.888];
 
 %Shear strain Upper
 gxy_u1 = (gn_u2 - gx_u2.*cosd(theta)^2 - gy_u2.*sind(theta)^2)/(sind(theta)*cosd(theta)); 
 
 % 1.3) strain lower surface I,J,K
-gn_l2  = [0 10.080]; 
-gx_l2 = [0 20.797];
+gx_l2  = [0 10.080]; 
+gn_l2 = [0 20.797];
 gy_l2 = [0 5.869];
 
 %Shear strain Lower
