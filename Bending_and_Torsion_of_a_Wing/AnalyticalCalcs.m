@@ -29,21 +29,21 @@ g87 = g12;
 %Torque vs shear strain theoretical plots
 
 figure(1) %%UPPER Surface
-plot([0 g23],[0 Torque],'r',LineWidth=1.5)
+
+plot([0 Torque],[0 g23],'r-x',LineWidth=1.5)
 legend('Torque vs Shear Strain (Upper Surface)')
-xlabel('Shear Strain')
-ylabel('Torque PL')
+ylabel('Shear Strain')
+xlabel('Torque PL (Nmm)')
 
-figure(2) %Lower surface
-plot([0 g76],[0 Torque],'r',LineWidth=1.5)
+%Lower surface
+figure(2)
+plot([0 Torque],[0 g76],'b-o',LineWidth=1.5)
 legend('Torque vs Shear Strain (Lower Surface)')
-xlabel('Shear Strain')
-ylabel('Torque PL')
-
-figure(3) %1-8 front spar wall
-plot([0 g18i],[0 Torque],'r',LineWidth=1.5)
-legend('Torque vs Shear Strain (side 1-8)')
-xlabel('Shear Strain')
-ylabel('Torque PL')
-
-
+ylabel('Shear Strain')
+xlabel('Torque PL (Nmm)')
+ %1-8 front spar wall
+figure(3)
+plot([0 Torque],[0 g18i],LineWidth=1.5)
+legend('Torque vs Shear Strain (side 1-8 front spar)')
+ylabel('Shear Strain')
+xlabel('Torque PL (Nmm)')
