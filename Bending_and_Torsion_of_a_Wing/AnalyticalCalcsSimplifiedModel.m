@@ -44,7 +44,7 @@ ylabel('Shear Strain')
 xlabel('Torque PL (Nmm)')
 
 figure(3) %1-8 front spar wall
-plot([0 max_T],[0 g18i*max_T],LineWidth=1.5)
+plot([0 max_T],[0 g18i*max_T],'r',LineWidth=1.5)
 legend('Torque vs Shear Strain (side 1-8) Front Spar')
 ylabel('Shear Strain')
 xlabel('Torque PL (Nmm)')
