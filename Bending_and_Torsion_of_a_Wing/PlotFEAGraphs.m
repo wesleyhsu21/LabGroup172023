@@ -2,7 +2,7 @@ clear
 clc
 close all
 
-TorsionMC = readmatrix("DataSimplified.xlsx","Sheet","Torsion MC");
+TorsionMC = readmatrix("DataImproved.xlsx","Sheet","Torsion MC");
 figure
 title('Mesh Convergence, Pure Torsion')
 hold on 
@@ -28,7 +28,7 @@ xlabel('Number of Elements')
 ylabel('Maximum Upper Surface Strain, E12, \times T')
 
 
-BendingMC = readmatrix("DataSimplified.xlsx","Sheet","Bending MC");
+BendingMC = readmatrix("DataImproved.xlsx","Sheet","Bending MC");
 figure
 title('Mesh Convergence, Bending')
 hold on 
