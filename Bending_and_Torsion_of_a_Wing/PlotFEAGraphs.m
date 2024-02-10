@@ -53,3 +53,52 @@ title('Mesh Convergence, Bending')
 xlabel('Number of Elements')
 ylabel('Maximum Upper Surface Displacement, U2, \times F')
 
+
+
+Superposition2 = readmatrix("DataImproved.xlsx","Sheet","Superposition2 BS5");
+Superposition1 = readmatrix("DataImproved.xlsx","Sheet","Superposition1 BS5");
+PureTorque = readmatrix("DataImproved.xlsx","Sheet","ImprovedModel Pure Torsion BS5");
+figure
+title('Superposition vs Pure Torque, Top Surface')
+hold on 
+plot(Superposition2(:,2), -(Superposition2(:,3) - Superposition1(:,3))/(286.66 + 17.4), '-b','LineWidth',1.5)
+plot(Superposition2(:,2), PureTorque(:,4),'--r','LineWidth',1.5)
+hold off
+legend('Superposition', 'Pure Torque')
+xlabel('Z Distance (mm)')
+ylabel('Top Surface, Strain E12, \times T')
+
+figure
+title('Superposition vs Pure Torque, Front Spar')
+hold on 
+plot(Superposition2(:,2), -(Superposition2(:,11) - Superposition1(:,11))/(286.66 + 17.4), '-b','LineWidth',1.5)
+plot(Superposition2(:,2), PureTorque(:,12),'--r','LineWidth',1.5)
+hold off
+legend('Superposition', 'Pure Torque')
+xlabel('Z Distance (mm)')
+ylabel('Front Spar Surface, Strain E12, \times T')
+
+
+figure
+title('Superposition vs Pure Torque, Front Spar')
+hold on 
+plot(Superposition2(:,2), -(Superposition2(:,7) - Superposition1(:,7))/(286.66 + 17.4), '-b','LineWidth',1.5)
+plot(Superposition2(:,2), PureTorque(:,8),'--r','LineWidth',1.5)
+hold off
+legend('Superposition', 'Pure Torque')
+xlabel('Z Distance (mm)')
+ylabel('Front Spar Surface, Strain E12, \times T')
+
+
+
+Wes1 = readmatrix("DataImproved.xlsx","Sheet","Wes Case 1");
+figure
+hold on 
+plot(Wes1(:,1), Wes1(:,2))
+plot(Wes1(:,1), Wes1(:,4))
+hold off
+
+figure
+hold on 
+plot(Wes1(:,1), Wes1(:,5))
+hold off
