@@ -1,0 +1,8 @@
+﻿-I"C:\Users\wesle\OneDrive - Imperial College London\Year 3\Lab Group 17\LabGroup172023\Control_Opt\Control_Lab\LQR_vel\work"
+-I"C:\Users\wesle\OneDrive - Imperial College London\Year 3\Lab Group 17\LabGroup172023\Control_Opt\Control_Lab\LQR_vel\work\slprj\sim\flightControlSystem"
+-I"C:\Program Files\MATLAB\R2023b\extern\include"
+-I"C:\Program Files\MATLAB\R2023b\simulink\include"
+-I"C:\Program Files\MATLAB\R2023b\rtw\c\src"
+-I"C:\Program Files\MATLAB\R2023b\rtw\c\src\ext_mode\common"
+-I"C:\Program Files\MATLAB\R2023b\rtw\c\ert"
+-I"C:\Users\wesle\OneDrive - Imperial College London\Year 3\Lab Group 17\LabGroup172023\Control_Opt\Control_Lab\LQR_vel\work\slprj\sim\_sharedutils"
